@@ -4,19 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Search gallery v5</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+      <div id="search-bar">
+        <input
+          type="text"
+          id="datetime-picker"
+          placeholder="   Search images..."
+        />
+        <button type="button" class="start-button" data-start>Search</button>
+      </div>
+      <span class="loader"></span>
+      <ul id="gallery"></ul>
 
-    <load src="./partials/footer.html" />
+      <button type="button" class="more-button" data-start>Load more</button>
+      <span class="loader-more">Loading more awesome photos</span>
+      <span class="loader-end"
+        >"We're sorry, but you've reached the end of search results."</span
+      >
+    </main>
 
     <script type="module" src="./main.js"></script>
   </body>
